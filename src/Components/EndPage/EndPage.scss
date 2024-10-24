@@ -1,0 +1,24 @@
+@import '../../variables';
+
+.endPage {
+  background-color: $primary-color;
+  color: white;
+  text-align: center;
+  width: 45vw;
+  height: 25vw;
+  margin: auto;
+  margin-top: 6vw;
+  box-shadow: 12px 12px $secondary-color;
+  div {
+    display: flex;
+  }
+  span {
+    color: $secondary-color;
+  }
+  h1 {
+    font-size: 4vw;
+  }
+  h2 {
+    font-size: 1.5vw;
+  }
+}

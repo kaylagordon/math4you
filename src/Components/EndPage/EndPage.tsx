@@ -1,4 +1,4 @@
-import './EndPage.css';
+import './EndPage.scss';
 
 function EndPage() {
   return (

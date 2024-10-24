@@ -4,6 +4,7 @@ import { Routes, Route } from 'react-router-dom';
 import HomePage from '../HomePage/HomePage';
 import GameForm from '../GameForm/GameForm';
 import MathBoard from '../MathBoard/MathBoard';
+import Header from '../Header/Header';
 import EndPage from '../EndPage/EndPage';
 import NextButton from '../NextButton/NextButton';
 
@@ -40,7 +41,13 @@ function App() {
             <NextButton nextLink='/play' />
           </>
         }/>
-        <Route path="/play" element={<><MathBoard /><NextButton nextLink='/end' /></>}/>
+        <Route path="/play" element={
+          <div className='game-board'>
+            <Header />
+            <MathBoard operation={operation} increaseCorrect={increaseCorrect} increaseIncorrect={increaseIncorrect}/>
+            <NextButton nextLink='/end' />
+          </div>
+        }/>
         <Route path="/end" element={<><EndPage /><NextButton nextLink='/' /></>}/>
       </Routes>
     </main>

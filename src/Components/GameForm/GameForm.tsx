@@ -1,10 +1,10 @@
 import './GameForm.scss';
 
 type Props = {
-  operation: string
-  time: string
-  updateOperation: (newOperation: string) => void
-  updateTime: (newTime: string) => void
+  operation: string;
+  time: string;
+  updateOperation: (newOperation: string) => void;
+  updateTime: (newTime: string) => void;
 }
 
 function GameForm(props: Props) {

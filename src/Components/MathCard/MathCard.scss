@@ -1,0 +1,61 @@
+@import '../../variables.scss';
+
+.mathCard {
+  border: none;
+  background-color: $primary-color;
+  color: white;
+  margin: 2%;
+  width: 20%;
+  height: 20vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.8vw;
+  letter-spacing: 1.3px;
+  animation: slide-in 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 0s both;
+  input {
+    font-size: 1.5vw;
+    padding: .4vw;
+  }
+  button {
+    margin: 1vw;
+    padding: 1vw;
+    width: 80%;
+    border-radius: 25px;
+    color: white;
+    background-color: $secondary-color;
+    border: none;
+  }
+}
+
+.correct {
+  background-color: $correct-color;
+  animation: slide-out 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) 1.5s both;
+}
+
+.incorrect {
+  background-color: $incorrect-color;
+}
+
+@keyframes slide-out {
+  0% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateZ(-1100px);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateZ(-1400px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateZ(0);
+    opacity: 1;
+  }
+}

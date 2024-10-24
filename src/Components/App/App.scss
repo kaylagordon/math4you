@@ -17,6 +17,10 @@ main {
   display: flex;
 }
 
+.game-board {
+  flex-direction: column;
+}
+
 button:hover {
   cursor: pointer;
   transform: scale(1.05);

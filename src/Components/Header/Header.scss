@@ -1,0 +1,27 @@
+@import '../../variables.scss';
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $primary-color;
+  color: white;
+  span {
+    color: $secondary-color;
+  }
+  h1 {
+    font-size: 4vw;
+  }
+  h2 {
+    font-size: 1.5vw;
+  }
+  button {
+    margin: 1vw;
+    padding: 1vw;
+    border-radius: 25px;
+    color: white;
+    background-color: $secondary-color;
+    border: none;
+    font-size: 1.3vw;
+  }
+}
