@@ -1,10 +1,22 @@
-import './NextButton.css';
+import './NextButton.scss';
+import { Link } from 'react-router-dom';
+import arrowImage from '../../images/arrow-icon.png';
 
-function NextButton() {
+type Props = {
+  nextLink: string
+}
+
+function NextButton({ nextLink }: Props) {
   return (
-    <div className="NextButton">
-      <p>NextButton</p>
-    </div>
+    <Link to={nextLink}>
+      <button
+        className='nextButton'
+        // onClick={this.resetInfo}
+      >
+      <p>let's go!</p>
+      <img src={arrowImage} alt='next-arrow'/>
+      </button>
+    </Link>
   );
 }
 
