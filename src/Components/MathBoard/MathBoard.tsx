@@ -1,4 +1,3 @@
-import React from 'react';
 import './MathBoard.css';
 
 function MathBoard() {

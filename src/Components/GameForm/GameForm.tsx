@@ -1,4 +1,3 @@
-import React from 'react';
 import './GameForm.css';
 
 function GameForm() {
