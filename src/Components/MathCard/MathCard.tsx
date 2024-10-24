@@ -37,7 +37,7 @@ function MathCard({operation, increaseCorrect, increaseIncorrect}: Props) {
       if (String(data.solution) === answer) {
         setEvaluatedTo('correct');
         increaseCorrect();
-        // setTimeout(getNewCard, 2500)
+        setTimeout(getNewCard, 2500)
       } else {
         setEvaluatedTo('incorrect');
         increaseIncorrect();
