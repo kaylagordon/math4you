@@ -1,22 +1,21 @@
-import './App.css';
+import './App.scss';
+import { Routes, Route } from 'react-router-dom';
+import HomePage from '../HomePage/HomePage';
+import GameForm from '../GameForm/GameForm';
+import MathBoard from '../MathBoard/MathBoard';
+import EndPage from '../EndPage/EndPage';
+import NextButton from '../NextButton/NextButton';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <main className="App">
+      <Routes>
+        <Route path="/" element={<><HomePage /><NextButton nextLink='/select' /></>}/>
+        <Route path="/select" element={<><GameForm /><NextButton nextLink='/play' /></>}/>
+        <Route path="/play" element={<><MathBoard /><NextButton nextLink='/end' /></>}/>
+        <Route path="/end" element={<><EndPage /><NextButton nextLink='/' /></>}/>
+      </Routes>
+    </main>
   );
 }
 
