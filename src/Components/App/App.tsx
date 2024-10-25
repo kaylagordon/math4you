@@ -1,6 +1,6 @@
 import './App.scss';
-import { useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import HomePage from '../HomePage/HomePage';
 import GameForm from '../GameForm/GameForm';
 import MathBoard from '../MathBoard/MathBoard';
@@ -13,6 +13,24 @@ function App() {
   const [time, setTime] = useState<string>('180');
   const [numberCorrect, setNumberCorrect] = useState<number>(0);
   const [numberIncorrect, setNumberIncorrect] = useState<number>(0);
+  const [timeLeft, setTimeLeft] = useState<boolean>(true);
+
+  const startTimer = () => {
+    setTimeLeft(true);
+  }
+
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (!timeLeft) {
+      navigate("/end");
+    }
+  }, [timeLeft])
+
+  const endTimer = () => {
+    setTimeLeft(false);
+    // setTimeLeft(true);
+  }
 
   const updateTime = (newTime: string) => {
     setTime(newTime);
@@ -43,7 +61,7 @@ function App() {
         }/>
         <Route path="/play" element={
           <div className='game-board'>
-            <Header />
+            <Header time={time} endTimer={endTimer} />
             <MathBoard operation={operation} increaseCorrect={increaseCorrect} increaseIncorrect={increaseIncorrect}/>
             <NextButton nextLink='/end' />
           </div>

@@ -30,7 +30,6 @@ function MathCard({operation, increaseCorrect, increaseIncorrect}: Props) {
   };
 
   const checkAnswer = () => {
-    console.log(expression, answer)
     getAnswer(operationPairings[operation], numbers)
     .then(data => {
       console.log(data);
