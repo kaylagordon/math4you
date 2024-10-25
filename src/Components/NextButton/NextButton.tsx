@@ -11,9 +11,8 @@ function NextButton({ nextLink }: Props) {
     <Link to={nextLink}>
       <button
         className='nextButton'
-        // onClick={this.resetInfo}
       >
-      <p>let's go!</p>
+      <p>{nextLink === '/' ? "play again!" : "let's go!"}</p>
       <img src={arrowImage} alt='next-arrow'/>
       </button>
     </Link>

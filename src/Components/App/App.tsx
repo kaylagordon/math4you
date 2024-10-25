@@ -66,7 +66,12 @@ function App() {
             <NextButton nextLink='/end' />
           </div>
         }/>
-        <Route path="/end" element={<><EndPage /><NextButton nextLink='/' /></>}/>
+        <Route path="/end" element={
+          <>
+            <EndPage numberCorrect={numberCorrect} numberIncorrect={numberIncorrect} time={time} />
+            <NextButton nextLink='/' />
+          </>
+        }/>
       </Routes>
     </main>
   );
