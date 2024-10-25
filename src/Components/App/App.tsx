@@ -24,12 +24,12 @@ function App() {
   useEffect(() => {
     if (!timeLeft) {
       navigate("/end");
+      setTimeLeft(true);
     }
   }, [timeLeft])
 
   const endTimer = () => {
     setTimeLeft(false);
-    // setTimeLeft(true);
   }
 
   const updateTime = (newTime: string) => {

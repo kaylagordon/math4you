@@ -9,11 +9,9 @@ type Props = {
 function NextButton({ nextLink }: Props) {
   return (
     <Link to={nextLink}>
-      <button
-        className='nextButton'
-      >
-      <p>{nextLink === '/' ? "play again!" : "let's go!"}</p>
-      <img src={arrowImage} alt='next-arrow'/>
+      <button className='nextButton'>
+        <p>{nextLink === '/' ? "play again!" : "let's go!"}</p>
+        <img src={arrowImage} alt='next-arrow'/>
       </button>
     </Link>
   );
