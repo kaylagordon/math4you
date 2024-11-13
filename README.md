@@ -16,29 +16,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ### TECHNOLOGIES USED
 <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)" />
-<img src="{BadgeURLHere}" />
-<img src="{BadgeURLHere}" />
-<img src="{BadgeURLHere}" />
-<img src="{BadgeURLHere}" />
-<img src="{BadgeURLHere}" />
-<img src="{BadgeURLHere}" />
-- React
-- Jest/Enzyme
-- Fetch API
-- Sass
+<img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" />
+<img src="https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white" />
+<img src="https://img.shields.io/badge/Sass-CC6699?style=for-the-badge&logo=sass&logoColor=white" />
 
-### WINS
-- Creatively approaching how to create large problem set without hard-coding problems
-- Clean UX/UI
-- Robust testing suite
-- Adding a timer to the display
-- Robust testing suite
-
-### CHALLENGES
-- Testing methods in functional components
-
-### FUTURE ITERATIONS
-- Create user profiles that hold past records and create challenges for beating old scores
-- Ensure that all factoring problems are solvable
+### Coming Soon
+- Cypress test suite
 
 
