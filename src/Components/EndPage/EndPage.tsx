@@ -12,13 +12,13 @@ function EndPage({ numberCorrect, numberIncorrect, time }: Props) {
     ((numberCorrect
     / parseInt(time)
     * 60)
-    .toFixed(1));
+    .toFixed(0));
 
   const accuracy =
     ((numberCorrect /
     (numberCorrect + numberIncorrect)
     * 100)
-    .toFixed(1));
+    .toFixed(0));
 
   return (
     <section className='endPage'>
